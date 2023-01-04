@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+</head>
+
+<style>
+  * {
+    padding: 0;
+    margin: 0;
+  }
+
+  :root {
+    font-size: 15px;
+  }
+
+  .container {
+    width: 1180px;
+    margin: 0 auto;
+  }
+
+  header {
+    border-bottom: 5px solid #16a085;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+  }
+
+  .logo {
+    color: #16a085;
+    font-weight: 700;
+    margin-right: 20px;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+
+  .link {
+    margin-right: auto;
+  }
+
+  ul li {
+    color: #777;
+    margin: 0 10px;
+  }
+
+  ul li:hover {
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .btn a {
+    color: #16a085;
+    border: 1px solid #16a085;
+    border-radius: .3rem;
+    padding: .3rem 1rem;
+    cursor: pointer;
+  }
+
+  .btn a:nth-child(2) {
+    background-color: #16a085;
+    color: white;
+  }
+
+  .label {
+    display: none;
+  }
+
+  @media only screen and (max-width:960px) {
+    .container {
+      width: 750px;
+      margin: 0 auto;
+    }
+
+    .link,
+    .btn {
+      display: none;
+    }
+
+    .logo {
+      margin-right: auto;
+    }
+
+    .label {
+      display: block;
+      border: 1px solid #16a085;
+      border-radius: .3rem;
+      padding: .3rem 1rem;
+      font-size: .3rem;
+      cursor: pointer;
+      background-color: #16a085;
+      color: white;
+    }
+
+    .link {
+      width: 100%;
+
+    }
+
+    ul {
+      flex-direction: column;
+      align-items: start;
+    }
+
+    ul li {
+      margin: .5rem 0;
+    }
+
+    .btn {
+      margin: .5rem 0;
+    }
+
+    nav {
+      flex-wrap: wrap;
+    }
+
+    #toggle:checked+.link,
+    #toggle:checked~.btn {
+      display: block;
+    }
+  }
+</style>
+
+
+<body>
+
+
+  <header>
+    <nav class="container">
+      <div class="logo">
+        java666
+      </div>
+      <label class="label" onclick="open" for="toggle">
+        展开
+      </label>
+      <input type="checkbox" id="toggle" style="display: none;">
+      <div class="link">
+        <ul>
+          <li>新手启航</li>
+          <li>实战项目</li>
+          <li>碎片课程</li>
+          <li>最新更新</li>
+        </ul>
+      </div>
+      <div class="btn">
+        <a>登录</a>
+        <a>注册</a>
+      </div>
+    </nav>
+  </header>
+
+</body>
+
+</html>
